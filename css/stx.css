@@ -31,8 +31,21 @@ body{
     /* 줄바꿈 할때 단어를 기준으로 설정 
     break-all: 줄바꿈을 하지 않는다.*/
     word-break: break-all;
-    height: 2000px;
-    background-color: rgb(71, 167, 167);
+}
+.container{
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* clearfix*/
+.clearfix::after{
+    content: "";
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
 }
 /* 모달창 */
 /* top버튼 */
@@ -53,6 +66,7 @@ body{
     z-index: 9999;
     overflow: hidden;
     transition: all 0.5s;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.205);
 }
 .header:hover{
     height: calc(330px + 80px);
@@ -70,7 +84,7 @@ body{
 .header::after{
     content: "";
     position: absolute;
-    top: 80px;
+    top: 81px;
     left: 0;
     width: 100%;
     height: 330px;
@@ -158,4 +172,270 @@ body{
 }
 .lang-list li:first-child:after{
     content: none;
+}
+
+/* 비주얼 (메인 택스트1) */
+.visual{
+    width: 100%;
+    height: 910px;
+    position: relative;
+    display: block;
+    background: url(../images/img_visual01.png) no-repeat center fixed;
+    background-size: cover;
+    margin-top: 80px;
+}
+.visual-inner{
+    position: relative;
+    height: 100%;
+    padding: 1px;
+}
+.visual-slogan{
+    position: relative;
+    display: block;
+    font-size: 70px;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 245px;
+}
+.visual-slogan::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -48px;
+    width: 60px;
+    height: 5px;
+    background-color: #ed1c24;
+}
+.visual-txt{
+    position: relative;
+    display: block;
+    margin-top: 42px;
+    font-size: 21px;
+    color: #fff;
+}
+.visual-bt{
+    width: 33px;
+    height: 33px;
+    font-size: 0;
+    border: 0;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    display: block;
+    transform: translateX(-50%);
+    background: url("../images/bg_common.png")no-repeat;
+    background-position: -122px 0;
+    cursor: pointer;
+}
+
+/* 비지니스 (메인 택스트2) */
+.business{
+    width: 100%;
+    position: relative;
+    display: block;
+}
+.business h2{
+    position: relative;
+    font-size: 44px ;
+    font-weight: 650;
+    text-align: center;
+    padding: 100px 0 22px 0;
+    color: #000;
+}
+.business h2::after{
+    content: "";
+    width: 37px;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 49%;
+    background-color: #ed1c24;
+}
+.business p{
+    position: relative;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.business-list{
+    width: 100%;
+    padding-bottom: 144px;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%); */
+}
+
+
+.btn-area{
+    text-align: center;
+    width: 1200px;
+    margin: 70px auto 0;
+    display: table;
+}
+.btn-area > li{
+    display: table-cell;
+}
+.btn-area li > a .list1, .list2, .list3, .list4, .list5{
+    position: relative;
+    width: 240px;
+    height: 420px;
+}
+.btn-area > li a .text{
+    font-size: 24px;
+    font-weight: 320;
+    color: #fff;
+    text-align: center;
+    padding-top: 94px;
+}
+
+
+
+/* 비지니스 이미지 영역 */
+.list1 .img-area{
+    width: 240px;
+    height: 420px;
+    background: url("../images/img_business.png");
+}
+.list2 .img-area{
+    width: 240px;
+    height: 420px;
+    background: url("../images/img_business.png");
+    background-position: -240px 0;
+}
+.list3 .img-area{
+    width: 240px;
+    height: 420px;
+    background: url("../images/img_business.png");
+    background-position: -480px 0;
+}
+.list4 .img-area{
+    width: 240px;
+    height: 420px;
+    background: url("../images/img_business.png");
+    background-position: -720px 0;
+}
+.list5 .img-area{
+    width: 240px;
+    height: 420px;
+    background: url("../images/img_business.png");
+    background-position: -960px 0;
+}
+
+/* 호버 애니메이션 */
+.hover-area{
+    width: 240px;
+    height: 420px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f48025;
+    opacity:0;
+    transition: 0.15s linear;
+}
+.hover-area:hover{
+    opacity: 1;
+}
+.hover-area .icon{
+    width: 130px;
+    height: 112px;
+    margin: 86px auto 90px;
+    background:url("../images/bg_common.png");
+    background-position: 0 0;
+    z-index: 97;
+}
+
+.list1 > .hover-area > .icon{
+    background-position:  -170px 0;
+}
+.list2 > .hover-area > .icon{
+    background-position: -298px 0;
+}
+.list3 > .hover-area > .icon{
+    background-position: 0 -120px;
+}
+.list4 > .hover-area > .icon{
+    background-position: -139px -122px;
+}
+.list5 > .hover-area > .icon{
+    background-position: -268px -115px;
+}
+
+/* 뉴스 */
+.news{
+    width: 100%;
+    height: 480px;
+    background-color: #f48025;
+}
+.news-bg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.notice-area{
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color: #ed1c24;
+    float: left;
+}
+.news-area{
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color: #58595b;
+    float: left;
+}
+
+/* 공지 | 보도 내용 설정 */
+.list-wrap h2{
+    margin-top: 45px;
+    font-size: 32px ;
+    color: #fff;
+    font-weight: 300;
+}
+.list-wrap ul{
+    margin-top: 40px ;
+    width: 500px;
+    max-width: 500px;
+    min-width: 200px;
+}
+.list-wrap ul li{
+    display: block;
+    padding: 26px 0;
+    border-top: 1px solid #ffffff67;
+}
+.list-wrap ul li:last-of-type{
+    padding: 26px 0;
+    border-bottom: 1px solid #ffffff67;
+}
+.list-wrap ul li a{
+    height: 24px;
+    font-size: 16px;
+    color: #fff;
+}
+/* 말줄임 표시! */
+.list-wrap ul li a span{
+    width: 50%;
+    height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* 줄내림 X */
+    overflow: hidden;
+}
+.list-wrap ul li a > .news-more{
+    width: 77px;
+    height: 23px;
+    background-image: url("../images/bg_common.png");
+    background-position: 0px -49px;
+    color: #00000000;
+    float: right;
+}
+.notice-area .list-wrap{
+    float: right;
+    margin-right: 70px;
+}
+.news-area .list-wrap{
+    float: left;
+    margin-left: 70px;
 }

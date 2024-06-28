@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/reset.css"><!-- css 리셋 -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/stx.css">
+    <link rel="stylesheet" href="js/main.js">
 
     <!-- 파비콘 적용 -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
@@ -38,6 +39,13 @@
     <link rel="mask-icon" href="images/icon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+    <!-- 자바스크립트 -->
+     <!-- IE9 이하는 HTML5 태그를 지원하지 않는다 -->
+     <script src="js/html5shiv.js"></script>
+     <!-- CSS적용 -->
+     <!-- <script src="js/prefixfree.min.js"></script> -->
+     <script src="js/main.js"></script>
 </head>
 <body>
     <!-- 모달창 -->
@@ -122,11 +130,160 @@
                 </div>
             </header>
             <!-- 메인 택스트 1 (비주얼) (배경 x)-->
-            <section class="visual"></section>
+            <section class="visual">
+                <div class="visual-inner container">
+                    <h1 class="visual-slogan">
+                        BEST OF THE WORLD
+                        <br>STX Engineering & Construction
+                    </h1>
+                    <span class="visual-txt">세계최고를 향해 STX건설이 힘차게 질주합니다!</span>
+                    <button class="visual-bt" id="business">버튼</button>
+                </div>
+            </section>
             <!-- 메인 택스트 2 (비지니스) --> <!-- 메인배경 (픽스 되어있는 상태)-->
-            <section class="business"></section>
+            <section class="business">
+                <div class="busuness-main-text">
+                    <h2>STX Engineering & Construction Business</h2>
+                    <p>
+                        STX건설은 건문 역량 강화를 통해 건축, 주택, 토목, 플랜트 사업 영역에서
+                        <br>탁월한 성과를 인정받은 기업으로 자연과 기술의 공간에 인류의 가치를 추구합니다.
+                    </p>
+                </div>
+                <!-- 비지니스 이미지 리스트 -->
+                <div class="business-list">
+                    <ul class="btn-area">
+                        <li>
+                            <a href="#">
+                                <div class="list1">
+                                    <div class="img-area">
+                                        <div class="text">건축사업</div>
+                                    </div>
+                                    <div class="hover-area">
+                                        <div class="text">건축사업</div>
+                                        <div class="icon"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="list2">
+                                    <div class="img-area">
+                                        <div class="text">주택사업</div>
+                                    </div>
+                                    <div class="hover-area">
+                                        <div class="text">주택사업</div>
+                                        <div class="icon"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="list3">
+                                    <div class="img-area">
+                                        <div class="text">토목사업</div>
+                                    </div>
+                                    <div class="hover-area">
+                                        <div class="text">토목사업</div>
+                                        <div class="icon"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="list4">
+                                    <div class="img-area">
+                                        <div class="text">플랜트/공작기계사업</div>
+                                    </div>
+                                    <div class="hover-area">
+                                        <div class="text">플랜트/공작기계사업</div>
+                                        <div class="icon"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="list5">
+                                    <div class="img-area">
+                                        <div class="text">해외사업</div>
+                                    </div>
+                                    <div class="hover-area">
+                                        <div class="text">해외사업</div>
+                                        <div class="icon"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             <!-- 공지사항 | 보도자료 (뉴스)-->
-            <section class="news"></section>
+            <section class="news">
+                <div class="news-bg">
+                    <!-- 공지사항 -->
+                    <div class="notice-area">
+                        <div class="list-wrap">
+                            <h2>공지사항</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span>분할계획서 변경공고</span>
+                                        <span class="news-more">바로가기</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>회사분할에 따른 주권제출 및 채원자 이의제출공고</span>
+                                        <span class="news-more">바로가기</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>본점 소재지 변경 알림</span>
+                                        <span class="news-more">바로가기</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>임시 주주총회 개최 공고</span>
+                                        <span class="news-more">바로가기</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 보도자료-->
+                    <div class="news-area">
+                        <div class="list-wrap">
+                        <h2>보도자료</h2>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span>회생절차 종료</span>
+                                    <span class="news-more">바로가기</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>STX건설, 춘천 레고랜드 테마파크 시공사 '선정'</span>
+                                    <span class="news-more">바로가기</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>STX건설, 2018년 성장 '청신호'</span>
+                                    <span class="news-more">바로가기</span>
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-inner container clearfix">바로가기</div>
+            </section>
             <!-- FAQ | 고객문의 -->
             <section class="cs"></section>
             <!-- 포부 전달 -->
