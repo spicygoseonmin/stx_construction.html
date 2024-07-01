@@ -49,12 +49,80 @@ body{
 }
 /* 모달창 */
 /* top버튼 */
+.top-button{
+    position: fixed;
+    right: 30px;
+    bottom: 60px;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.chat-btn{
+    animation:updown 1.5s infinite;
+}
+/* 애니메이션 효과 */
+@keyframes updown{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.chat-btn span{
+    position: absolute;
+    top: 34px;
+    left: -186px;
+    width: 180px;
+    background-color: #fff;
+    border-radius: 23px;
+    padding: 8px 10px;
+    text-align: center;
+    box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+    display: none;
+
+}
+.chat-btn:hover span{
+    display: block;
+}
+.shop-btn{
+    position: relative;
+    display: block;
+    width: 55px;
+    line-height: 55px;
+    background-color: #fff;
+    font-size: 14px;
+    border-radius: 50%;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+}
+.top-btn{
+    width: 55px;
+    line-height: 55px;
+    border-radius: 50%;
+    background-color: #ed1c24;
+    text-align: center;
+    box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+}
+.top-btn img{
+    transform: rotate(180deg);
+}
+.top-btn img.up{
+    transform: rotate(0deg);
+}
+
+
 /* 전체 레이아웃 */
 .wrap{
     position: relative;
     display: block;
 }
-
 /* 상단 */
 .header{
     width: 100%;
@@ -438,4 +506,171 @@ body{
 .news-area .list-wrap{
     float: left;
     margin-left: 70px;
+}
+
+
+/* cs */
+.cs{
+    width: 100%;
+    height: 360px;
+    padding: 60px 0 100px;
+    background-color: #f8f8f8;
+}
+.cs-wrap{
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: white;
+}
+.cs-wrap h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+.cs-wrap p{
+    margin-top: 15px;
+    line-height: 1.5em;
+}
+.cs .faq{
+    padding: 40px 56px;
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid #f8f8f8;
+    float: left;
+    background: url("../images/bg_faq.png") no-repeat 90% center;
+}
+.cs .as{
+    padding: 40px 56px;
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid #f8f8f8;
+    float: left;
+    background: url("../images/bg_custom.png") no-repeat 90% center;
+}
+
+/* about */
+.about{
+    width: 100%;
+}
+.about-wrap{
+    margin: 98px auto;
+}
+.about-us{
+    width: 1200px;
+    height: 370px;
+    margin: 0 auto;
+    background: url("../images/img_about.png") no-repeat 90% center;
+}
+
+/* 어바웃 글씨창 너비 */
+.about-text{
+    /* width: 450px; */
+}
+.about-text h2{
+    font-size: 44px;
+    font-weight: 600;
+    color: #000;
+    padding-top: 25px;
+    margin-bottom: 40px
+}
+.about-wrap-Pbox{
+    padding-left: 100px;
+    position: relative;
+}
+.about-text .about-wrap-Pbox::after{
+    content: "";
+    width: 37px;
+    height: 5px;
+    position: absolute;
+    top: 18px;
+    left: 0;
+    background-color: #ed1c24;
+}
+.about-text p:first-of-type{
+    font-size: 21px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 20px;
+}
+.about-text p:last-of-type{
+    font-size: 15px;
+}
+
+/* about icon 어바웃 아이콘 */
+.about-icon{
+    width: 1200px;
+    margin: 0 auto;
+}
+.about-icon ul{
+    width: 730px;
+    height: 165px;
+    margin: 80px auto 0px;
+    position: relative;
+}
+.about-icon ul > li{
+    height: 120px;
+    display: inline-block;
+    text-align: center;
+}
+
+
+/* 아이콘 글씨 */
+.about-icon ul span{
+    display: block;
+    padding-top: 130px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+}
+.about-icon ul .about-icon-1 a{
+    width: 103px;
+    height: 108px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/bg_icon.png")no-repeat ;
+}
+.about-icon ul .about-icon-2 a{
+    width: 103px;
+    height: 108px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../images/bg_icon.png") no-repeat ;
+    background-position: -116px 0;
+}
+.about-icon ul .about-icon-3 a{
+    width: 103px;
+    height: 108px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../images/bg_icon.png") no-repeat ;
+    background-position: -235px 0;
+}
+
+
+/* 푸터 */
+.footer{
+    width: 100%;
+    height: 168px;
+    background-color: #4e4e4e;
+}
+.footer-wrap{
+    width:1200px;
+    height: 168px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.footer-wrap img{
+    width: 122px;
+    float: left;
+}
+.footer-wrap a ul{
+    width: 840px ;
+    float: left;
+    color: #c3c3c3;
+    font-size: 13px;
+    padding-left: 135px;
+    line-height: 1.8;
 }
