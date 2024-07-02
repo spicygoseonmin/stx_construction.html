@@ -44,4 +44,26 @@ window.addEventListener("scroll", function(scTop) {
         topBtnImg.classList.remove("up")
     }
 });
+// 모달창 닫기================================================
+const body = document.querySelector("body");
+const modal = document.querySelector(".modal-wrap");
+const modalClose = document.querySelector(".modal-close");
+// isOpen 값에 따라 스크롤을 제어하는 함수
+function controlScroll(isOpen) {
+if (isOpen) {
+    body.style.overflow = "hidden";
+    } else {
+    body.style.overflow = "auto";
+    }
+}
+// 초기 모달창 설정=
+const isOpen = true;
+controlScroll(isOpen);
+modalClose.addEventListener("click" , function () {
+    modal.style.display = "none";
+    // 모달창이 닫힐때는 스크롤을 활성화
+    controlScroll(false);
+
+});
+// *const 앞에 주어진 택스트는 본인 임의로 정하는 클래스임을 명시
 };
